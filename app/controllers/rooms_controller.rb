@@ -2,7 +2,7 @@ class RoomsController < ApplicationController
 
 # NEW
   def new
-    @rooom = Room.new
+    @room = Room.new
   end
 
 # INDEX
