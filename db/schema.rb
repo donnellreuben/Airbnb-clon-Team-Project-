@@ -39,7 +39,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_04_27_172510) do
     t.integer "total_occupancy"
     t.integer "total_bedrooms"
     t.integer "total_bathrooms"
->>>>>>> e73380ec1c714fb0446e4c1549c114cb9fade917
+
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
