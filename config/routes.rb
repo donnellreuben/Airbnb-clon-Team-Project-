@@ -1,13 +1,13 @@
 Rails.application.routes.draw do
+
+  resources :rooms
   # get "/rooms" => "rooms#index"
   # post "/rooms" => "rooms#new"
   # get "/rooms/:id" => "rooms#show"
   # post "/rooms" => "room#create"
   # patch "/rooms/:id" => "rooms#update"
   # delete "/rooms/:id" => "rooms#destroy"
-  # get "/rooms/:id/edit" => "rooms#edit"
-  resources :rooms
-  
+  # get "/rooms/:id/edit" => "rooms#edit"  
 
 
   get "/reservations" => "reservations#index"
