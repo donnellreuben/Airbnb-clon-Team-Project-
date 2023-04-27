@@ -1,0 +1,9 @@
+<h1>All Rooms</h1>
+<% @rooms.each do |room| %>
+  <h2><%= room.address %></h2>
+  <p>Price: <%= room.price %></p>
+  <p>Description: <%= room.description %></p>
+  <a href="/rooms/<%= room.id %>">More info</a>
+  <a href="/rooms/new">New Room</a>
+<% end %>
+

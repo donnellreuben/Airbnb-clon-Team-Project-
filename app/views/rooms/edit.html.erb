@@ -1,0 +1,45 @@
+<h1>Edit Room</h1>
+<%= form_with model: @room do |form| %>
+  <div>
+    <%= form.label :address %>
+    <%= form.text_field :address %>
+  </div>
+  <div>
+    <%= form.label :city %>
+    <%= form.text_field :city %>
+  </div>
+  <div>
+    <%= form.label :state %>
+    <%= form.text_field :state %>
+  </div>
+  <div>
+    <%= form.label :price %>
+    <%= form.text_field :price %>
+  </div>
+  <div>
+    <%= form.label :description %>
+    <%= form.text_area :description %>
+  </div>
+  <div>
+    <%= form.label :home_type %>
+    <%= form.text_field :home_type %>
+  </div>
+  <div>
+    <%= form.label :room_type %>
+    <%= form.text_field :room_type %>
+  </div>
+  <div>
+    <%= form.label :total_occupancy %>
+    <%= form.number_field :total_occupancy %>
+  </div>
+  <div>
+    <%= form.label :total_bedrooms %>
+    <%= form.number_field :total_bedrooms %>
+  </div>
+  <div>
+    <%= form.label :total_bathrooms %>
+    <%= form.number_field :total_bathrooms %>
+  </div>
+  <%= form.submit %>
+<% end %>
+
