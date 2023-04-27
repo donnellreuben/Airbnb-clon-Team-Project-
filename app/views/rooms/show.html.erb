@@ -1,0 +1,15 @@
+<h1>Room Info</h1>
+<h2><%= @room.address %></h2>
+<p>City: <%= @room.city %></p>
+<p>State: <%= @room.state %></p>
+<p>Price: <%= @room.price %></p>
+<p>Description: <%= @room.description %></p>
+<p>Home Type: <%= @room.home_type %></p>
+<p>Room Type: <%= @room.room_type %></p>
+<p>Total Occupancy: <%= @room.total_occupancy %></p>
+<p>Total Bedrooms: <%= @room.total_bedrooms %></p>
+<p>Total Bathrooms: <%= @room.total_bathrooms %></p>
+<a href="/rooms/<%= @room.id %>/edit">Edit Room</a>
+<a href="/rooms">Back to all Rooms</a>
+<a href="/rooms/<%= @room.id %>" data-turbo-method="delete">Destroy Room</a>
+

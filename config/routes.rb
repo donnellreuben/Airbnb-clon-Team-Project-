@@ -34,4 +34,7 @@ post "/users" => "users#create"
 patch "/users/:id" => "users#update"
 delete "/users/:id" => "users#destroy"
 
+  # Defines the root path route ("/")
+  # root "articles#index"
+  
 end
