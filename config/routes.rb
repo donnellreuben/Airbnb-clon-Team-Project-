@@ -1,10 +1,11 @@
 Rails.application.routes.draw do
-get "/rooms" => "rooms#index"
-post "/rooms" => "rooms#new"
-get "/rooms/:id" => "rooms#show"
-post "/rooms" => "room#create"
-patch "/rooms/:id" => "rooms#update"
-delete "/rooms/:id" => "rooms#destroy"
+# get "/rooms" => "rooms#index"
+# post "/rooms" => "rooms#new"
+# get "/rooms/:id" => "rooms#show"
+# post "/rooms" => "room#create"
+# patch "/rooms/:id" => "rooms#update"
+# delete "/rooms/:id" => "rooms#destroy"
+resources :rooms
 
 get "/reservations" => "reservations#index"
 post "/reservations" => "reservations#new"
