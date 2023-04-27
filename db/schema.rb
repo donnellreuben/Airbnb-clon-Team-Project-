@@ -10,8 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-<<<<<<< HEAD
-ActiveRecord::Schema[7.0].define(version: 2023_04_27_172959) do
+ActiveRecord::Schema[7.0].define(version: 2023_04_27_175730) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -22,10 +21,24 @@ ActiveRecord::Schema[7.0].define(version: 2023_04_27_172959) do
     t.date "end_date"
     t.decimal "price"
     t.decimal "total"
-=======
-ActiveRecord::Schema[7.0].define(version: 2023_04_27_172510) do
-  # These are extensions that must be enabled in order to support this database
-  enable_extension "plpgsql"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "reviews", force: :cascade do |t|
+    t.integer "reservation_id"
+    t.integer "rating"
+    t.string "comment"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "room_images", force: :cascade do |t|
+    t.integer "room_id"
+    t.string "url"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "rooms", force: :cascade do |t|
     t.integer "user_id"
@@ -39,7 +52,6 @@ ActiveRecord::Schema[7.0].define(version: 2023_04_27_172510) do
     t.integer "total_occupancy"
     t.integer "total_bedrooms"
     t.integer "total_bathrooms"
->>>>>>> e73380ec1c714fb0446e4c1549c114cb9fade917
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
