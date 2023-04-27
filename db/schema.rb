@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-<<<<<<< HEAD
+
 ActiveRecord::Schema[7.0].define(version: 2023_04_27_172959) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -22,7 +22,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_04_27_172959) do
     t.date "end_date"
     t.decimal "price"
     t.decimal "total"
-=======
+
 ActiveRecord::Schema[7.0].define(version: 2023_04_27_172510) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
