@@ -15,16 +15,7 @@ class UsersController < ApplicationController
       password_confirmation: params[:user][:password_confirmation],
 
     )
-    if @user.save
-      session[:user_id] = @user.id
-      redirect_to "/pets"
-    else
-      render :new, status: :unprocessable_entity
-    end
-  end
-end
 
-     )
     if @user.save
       session[:user_id] = @user.id
       redirect_to "/login", notice: "User was successfully created" 
