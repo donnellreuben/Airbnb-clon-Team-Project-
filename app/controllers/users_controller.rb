@@ -13,12 +13,10 @@ class UsersController < ApplicationController
       email: params[:user][:email],
       password: params[:user][:password],
       password_confirmation: params[:user][:password_confirmation],
-
-    )
-
+     )
     if @user.save
       session[:user_id] = @user.id
-      redirect_to "/login", notice: "User was successfully created" 
+      redirect_to "/login", notice: "User was successfully created" #EDIT THIS REDIRECT TO SIGNUP RN
     else
       render :new, status: :unprocessable_entity
     end

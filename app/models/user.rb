@@ -1,10 +1,11 @@
 class User < ApplicationRecord
+  has_secure_password
+  validates :email, presence: true, uniqueness: true
+  validates :name, presence: true
+
   has_many :rooms, dependent: :destroy
   has_many :reservations
   has_many :reviews, through: :reservations
-
-  has_secure_password
-  validates :email, presence: true, uniqueness: true
 
 end
 
