@@ -3,18 +3,18 @@ class ReservationsController < ApplicationController
   # NEW
   def new
     # @room = Room.find(params[:room_id])
-    @reservations = Reservations.new
+    @reservations = Reservation.new
   end
 
   #INDEX
   def index
-    @reservations = Reservations.all 
+    @reservations = Reservation.all 
     render :index 
   end 
 
 # CREATE
   def create 
-    @reservations = Reservations.new(
+    @reservations = Reservation.new(
       user_id: params[:reservations][:user_id],
       room_id: params[:reservations][:room_id],
       start_date: params[:reservations][:start_date],
