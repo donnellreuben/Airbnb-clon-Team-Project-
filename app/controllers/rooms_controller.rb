@@ -88,12 +88,13 @@ class RoomsController < ApplicationController
   end
 
 # DELETE/DESTROY
-  def delete
+  def destroy
     @room = Room.find(params[:id])
     @room.destroy
-
-    redirect_to "/rooms"
+    redirect_to rooms_path, notice: "Room was successfully deleted"
   end
+
+
 
 private
 
