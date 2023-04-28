@@ -13,3 +13,6 @@
 <a href="/rooms">Back to all Rooms</a>
 <a href="/rooms/<%= @room.id %>" data-turbo-method="delete">Destroy Room</a>
 
+<%# <a href="/rooms/reservations">Reserve Room</a> %>
+<%= link_to "Reserve Room", reservations_room_path(@room) %>
+
