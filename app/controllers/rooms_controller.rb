@@ -12,7 +12,11 @@ class RoomsController < ApplicationController
 #The create_reservation action finds the room that the user wants to reserve, builds a new Reservation instance based on the form parameters, sets the user_id attribute to the current user's ID, and then tries to save the reservation to the database. If the reservation is successfully saved, the user is redirected to the show action for the reservation. Otherwise, the reservations.html.erb view is rendered again.
   def create_reservation
     @room = Room.find(params[:id])
-    @reservation = @room.reservations.build(reservation_params)
+    @reservation = Reservation.new(
+      start_date: params[:start_date],
+      end_date: params[:end],
+    )
+  
     @reservation.user_id = current_user.id
     if @reservation.save
       redirect_to @reservation
