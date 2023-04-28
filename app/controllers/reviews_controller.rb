@@ -6,6 +6,11 @@ class ReviewsController < ApplicationController
     render :index
   end
 
+  def new
+    @review = Review.new
+    render template: "reviews/new"
+  end
+
 # CREATE
   def create 
     @reviews = Reservation.new(
