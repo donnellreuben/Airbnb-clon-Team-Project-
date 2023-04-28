@@ -92,12 +92,17 @@ class RoomsController < ApplicationController
   end
 
 # DELETE/DESTROY
-  def delete
+  def destroy
     @room = Room.find(params[:id])
-    @room.destroy
-
-    redirect_to "/rooms"
+    if @room.user == current_user
+      @room.destroy
+      redirect_to rooms_path, notice: "Room was successfully deleted"
+    else
+      redirect_to rooms_path, notice: "You are not authorized to delete this room"
+    end
   end
+
+
 
 private
 
