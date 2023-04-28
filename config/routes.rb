@@ -37,8 +37,6 @@ Rails.application.routes.draw do
   get "/rooms/:id/reservations" => "rooms#reservations"
   post "/rooms/:id/reservations" => "rooms#create_reservation"
 
-<<<<<<< HEAD
-=======
   resources :rooms do
     get 'reservations', on: :member
     post 'create_reservation', on: :member
@@ -46,7 +44,6 @@ Rails.application.routes.draw do
   resources :rooms
   post "/rooms/:id/reservations" => "rooms#create_reservation"
 
->>>>>>> e7ab715a82e15db55b231d991563e060911187db
 # SIGNUP
   get "/signup" => "users#new"
   post "/users" => "users#create"
