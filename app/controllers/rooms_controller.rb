@@ -1,5 +1,4 @@
 class RoomsController < ApplicationController
-
 # NEW
   def new
     @room = Room.new
@@ -13,7 +12,7 @@ class RoomsController < ApplicationController
 
 # CREATE
   def create 
-    @room = Room.new(
+    @rooms = Room.new(
       address: params[:room][:address],
       city: params[:room][:city],
       state: params[:room][:state],
@@ -24,7 +23,7 @@ class RoomsController < ApplicationController
       total_occupancy: params[:room][:total_occupancy],
       total_bedrooms: params[:room][:total_bedrooms],
     )
-    @room.save
+    @rooms.save
     redirect_to "/rooms"
   end
 
