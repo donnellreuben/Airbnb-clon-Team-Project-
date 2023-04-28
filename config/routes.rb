@@ -10,42 +10,35 @@ Rails.application.routes.draw do
   # get "/rooms/:id/edit" => "rooms#edit"  
 
 
-  get "/reservations" => "reservations#index"
-  post "/reservations" => "reservations#new"
-  get "/reservations/:id" => "reservations#show"
-  post "/reservations" => "reservations#create"
-  patch "/reservations/:id" => "reservations#update"
-  delete "/reservations/:id" => "reservations#destroy"
+  # get "/reservations" => "reservations#index"
+  # post "/reservations" => "reservations#new"
+  # get "/reservations/:id" => "reservations#show"
+  # post "/reservations" => "reservations#create"
+  # patch "/reservations/:id" => "reservations#update"
+  # delete "/reservations/:id" => "reservations#destroy"
 
-  get "/reviews" => "reviews#index"
-  post "/reviews" => "reviews#new"
-  get "/reviews/:id" => "reviews#show"
-  post "/reviews" => "reviews#create"
-  patch "/reviews/:id" => "reviews#update"
-  delete "/reviews/:id" => "reviews#destroy"
+  # get "/reviews" => "reviews#index"
+  # post "/reviews" => "reviews#new"
+  # get "/reviews/:id" => "reviews#show"
+  # post "/reviews" => "reviews#create"
+  # patch "/reviews/:id" => "reviews#update"
+  # delete "/reviews/:id" => "reviews#destroy"
 
-  get "/room_images" => "room_images#index"
-  post "/room_images" => "room_images#new"
-  get "/room_images/:id" => "room_images#show"
-  post "/room_images" => "room_images#create"
-  patch "/room_images/:id" => "room_images#update"
-  delete "/room_images/:id" => "room_images#destroy"
+  # get "/room_images" => "room_images#index"
+  # post "/room_images" => "room_images#new"
+  # get "/room_images/:id" => "room_images#show"
+  # post "/room_images" => "room_images#create"
+  # patch "/room_images/:id" => "room_images#update"
+  # delete "/room_images/:id" => "room_images#destroy"
 
-  
-  get "/users" => "users#index"
-  post "/users" => "users#new"
-  get "/users/:id" => "users#show"
-  post "/users" => "users#create"
-  patch "/users/:id" => "users#update"
-  delete "/users/:id" => "users#destroy"
-
+# SIGNUP
   get "/signup" => "users#new"
   post "/users" => "users#create"
 
+# LOGIN
   get "/login" => "sessions#new"
   post "/sessions" => "sessions#create"
   get "/logout" => "sessions#destroy"  
-  # Defines the root path route ("/")
-  # root "articles#index"
+
   
 end
