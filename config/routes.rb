@@ -34,6 +34,9 @@ Rails.application.routes.draw do
     get 'reservations', on: :member
     post 'create_reservation', on: :member
   end
+  resources :rooms
+  post "/rooms/:id/reservations" => "rooms#create_reservation"
+
 # SIGNUP
   get "/signup" => "users#new"
   post "/users" => "users#create"

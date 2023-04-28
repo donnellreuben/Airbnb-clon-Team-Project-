@@ -15,7 +15,7 @@ class RoomsController < ApplicationController
     @reservation = @room.reservations.build(reservation_params)
     @reservation.user_id = current_user.id
     if @reservation.save
-      redirect_to @reservation
+      redirect_to "/rooms", notice: "Reservation was successfully created"
     else
       render 'reservations'
     end
@@ -40,8 +40,7 @@ class RoomsController < ApplicationController
 
 # CREATE
   def create 
-    @room = Room.new(
-      user_id: params[:room][:user_id],
+    @room = current_user.rooms.new(
       address: params[:room][:address],
       city: params[:room][:city],
       state: params[:room][:state],
@@ -53,7 +52,7 @@ class RoomsController < ApplicationController
       total_bedrooms: params[:room][:total_bedrooms],
       total_bathrooms: params[:room][:total_bathrooms]
     )
-    @rooms.save
+    @room.save
     redirect_to "/rooms"
   end
 
@@ -94,5 +93,11 @@ class RoomsController < ApplicationController
     @room.destroy
 
     redirect_to "/rooms"
+  end
+
+private
+
+  def reservation_params
+    params.require(:reservation).permit(:start_date, :end_date)
   end
 end

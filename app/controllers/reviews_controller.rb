@@ -13,7 +13,7 @@ class ReviewsController < ApplicationController
 
 # CREATE
   def create 
-    @reviews = Reservation.new(
+    @reviews = Review.new(
       reservation_id: params[:review][:reservation_id],
       rating: params[:review][:rating],
       comment: params[:review][:comment],
