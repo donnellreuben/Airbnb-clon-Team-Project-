@@ -23,7 +23,7 @@ class ReservationsController < ApplicationController
       )
     @reservations.save
     redirect_to "/reservations"
-end 
+  end 
 
 #SHOW
   def show
@@ -49,7 +49,7 @@ end
     )
 
     redirect_to "/reservations"
-end
+  end
 
 # DELETE/DESTROY
   def delete
