@@ -1,6 +1,4 @@
 Rails.application.routes.draw do
-
-  resources :rooms
   # get "/rooms" => "rooms#index"
   # post "/rooms" => "rooms#new"
   # get "/rooms/:id" => "rooms#show"
@@ -31,6 +29,11 @@ Rails.application.routes.draw do
   # patch "/room_images/:id" => "room_images#update"
   # delete "/room_images/:id" => "room_images#destroy"
 
+
+  resources :rooms do
+    get 'reservations', on: :member
+    post 'create_reservation', on: :member
+  end
 # SIGNUP
   get "/signup" => "users#new"
   post "/users" => "users#create"
