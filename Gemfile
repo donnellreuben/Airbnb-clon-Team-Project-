@@ -70,3 +70,8 @@ group :test do
   gem "selenium-webdriver"
   gem "webdrivers"
 end
+
+#Signup
+gem 'bcrypt', '~> 3.1.7'
+#Login
+gem 'jwt'

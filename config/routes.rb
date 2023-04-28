@@ -31,6 +31,7 @@ Rails.application.routes.draw do
   patch "/room_images/:id" => "room_images#update"
   delete "/room_images/:id" => "room_images#destroy"
 
+  
   get "/users" => "users#index"
   post "/users" => "users#new"
   get "/users/:id" => "users#show"
@@ -38,6 +39,12 @@ Rails.application.routes.draw do
   patch "/users/:id" => "users#update"
   delete "/users/:id" => "users#destroy"
 
+  get "/signup" => "users#new"
+  post "/users" => "users#create"
+
+  get "/login" => "sessions#new"
+  post "/sessions" => "sessions#create"
+  get "/logout" => "sessions#destroy"  
   # Defines the root path route ("/")
   # root "articles#index"
   
