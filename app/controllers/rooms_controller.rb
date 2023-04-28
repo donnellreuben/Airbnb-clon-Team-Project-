@@ -7,13 +7,18 @@ class RoomsController < ApplicationController
 
 # INDEX
   def index 
-    @rooms = Room.all 
-    render :index 
+  # Only display rooms that dont have any reservations
+    if current_user
+      @rooms = Room.left_outer_joins(:reservations).where(reservations: { id: nil })
+    else
+      @rooms = Room.all 
+    end
+    render "index", rooms: @rooms
   end
 
 # CREATE
   def create 
-    @room = Room.new(
+    @room = current_user.rooms.new(
       user_id: params[:room][:user_id],
       address: params[:room][:address],
       city: params[:room][:city],
