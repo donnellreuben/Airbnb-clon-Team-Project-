@@ -1,10 +1,11 @@
 class RoomImagesController < ApplicationController
-  # NEW
+
+# NEW
   def new
     @room_image = Room_image.new
   end
 
-  #INDEX
+# INDEX
   def index
     @room_image = Room_image.all 
     render :index 
@@ -25,7 +26,7 @@ class RoomImagesController < ApplicationController
     end 
 end 
 
-#SHOW
+# SHOW
   def show
     @room_image = Room_image.find(params[:id])
     render :show
@@ -37,6 +38,7 @@ end
     render :edit 
   end
 
+# UPDATE
   def update 
     @room_image = room_image.find(params[:id])
     @room_image.update(

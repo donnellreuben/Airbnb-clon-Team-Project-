@@ -1,10 +1,12 @@
 class ReviewsController < ApplicationController
+
+# INDEX
   def index
     @reviews = Review.all
     render :index
   end
 
-  # CREATE
+# CREATE
   def create 
     @reviews = Reservation.new(
       reservation_id: params[:review][:reservation_id],
@@ -15,7 +17,7 @@ class ReviewsController < ApplicationController
     redirect_to "/reviews"
 end 
 
-#SHOW
+# SHOW
   def show
     @reviews = Review.find(params[:id])
     render :show
@@ -27,6 +29,7 @@ end
     render :edit 
   end
 
+# UPDATE
   def update 
     @review = Review.find(params[:id])
     @review.update(
@@ -36,7 +39,7 @@ end
     )
 
     redirect_to "/reviews"
-end
+  end
 
 # DELETE/DESTROY
   def delete
