@@ -23,8 +23,7 @@ class RoomImagesController < ApplicationController
       )
     @room_image.save
     redirect_to "/room_image"
-    end 
-end 
+  end  
 
 # SHOW
   def show
@@ -48,7 +47,7 @@ end
     )
 
     redirect_to "/room_image"
-end
+  end
 
 # DELETE/DESTROY
   def delete
@@ -57,4 +56,5 @@ end
 
     redirect_to "/room_images"
   end
+
 end
