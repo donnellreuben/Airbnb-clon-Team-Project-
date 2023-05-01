@@ -22,3 +22,5 @@ bin/dev *recommended*
 ```ruby
 -localhost:3000
 ```
+
+<img width="1728" alt="Screenshot 2023-05-01 at 3 09 08 PM" src="https://user-images.githubusercontent.com/117698398/235522543-b90a374a-e405-4b92-ad09-452448a9697a.png">
