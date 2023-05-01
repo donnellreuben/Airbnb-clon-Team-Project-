@@ -1,24 +1,24 @@
-# README
+-Edit .ruby-version to the version of Ruby you want to use then 
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# Bundle Install
+run in terminal
+```ruby
+gem install foreman 
+```
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+# Database
+```ruby
+bundle install 
+```
+# Server, either
+```ruby
+rails server 
+```
+or
+```ruby
+bin/dev *recommended*
+```
+# To view AirBnb
+```ruby
+-localhost:3000
+```
